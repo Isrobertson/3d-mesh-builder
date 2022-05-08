@@ -1,0 +1,13 @@
+Main program
+	To do:
+
+		1. finish polymorphism
+		2. make an output function to properly--
+		   format and output to the .obj file
+		3. make user I/O for program usability
+
+Terrain builder
+
+	to do:
+		1. finish triangulate function
+		2. set up quad grouping (for better organization of format)

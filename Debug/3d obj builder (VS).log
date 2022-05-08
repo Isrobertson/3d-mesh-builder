@@ -1,0 +1,7 @@
+﻿  3d_height_perlin_noise.cpp
+C:\Users\Ian\Documents\College\C++ Class\final project\3d object builder\visual studio repos\3d obj builder (VS)\source\3d_height_perlin_noise.cpp(24,13): warning C4244: 'argument': conversion from 'time_t' to 'unsigned int', possible loss of data
+  3d_terrain_builder.cpp
+  main.cpp
+  output_file.cpp
+  Generating Code...
+  3d obj builder (VS).vcxproj -> C:\Users\Ian\Documents\College\C++ Class\final project\3d object builder\visual studio repos\3d obj builder (VS)\Debug\3d obj builder (VS).exe

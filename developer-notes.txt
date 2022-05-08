@@ -1,13 +1,15 @@
-Main program
-	To do:
+Refactoring notes:
 
-		1. finish polymorphism
-		2. make an output function to properly--
-		   format and output to the .obj file
-		3. make user I/O for program usability
+	1. figure out how to write faster processing power.
+	2. look into clever dynamic memory allocation for faster processing power.
+		-- if the terrain's dimentions is more than 200 then use a dynamic array in the heap.
 
-Terrain builder
+Functionality needed
 
-	to do:
-		1. finish triangulate function
-		2. set up quad grouping (for better organization of format)
+	1. finish the terrain perlin noise function--
+		-DO RESEARCH!
+
+
+NOTE:
+	Upload to the refactor branch to show the difference between what I made for the deadline
+	and what I refactored to better my skill in coding

@@ -1,13 +1,12 @@
 Refactoring notes:
 
-	1. figure out how to write faster processing power.
-	2. look into clever dynamic memory allocation for faster processing power.
-		-- if the terrain's dimentions is more than 200 then use a dynamic array in the heap.
+	1. Finish the perlin noise generation function
+	2. (OPTIONAL) touch up on the project to make it more efficient
 
 Functionality needed
 
 	1. finish the terrain perlin noise function--
-		-DO RESEARCH!
+		- figure out how to implement perlin noise (research)
 
 
 NOTE:

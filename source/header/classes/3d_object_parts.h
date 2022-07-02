@@ -133,6 +133,7 @@ private:
     std::vector<Vertex> vList;
     std::vector<Triangle> triList;
     std::vector<Quads> quadList;
+    std::vector<Vertex> *pVList;
 
     void displayShortRangedTriListMessage()
     {
@@ -151,6 +152,12 @@ public:
     std::vector<Vertex> getVertexList()                     { return vList; }
     std::vector<Triangle> getTriList()                      { return triList;  }
     std::vector<Quads> getQuadList()                        { return quadList;  }
+
+    std::vector<Vertex> *getVertexListByPointer()
+    {
+        pVList = &vList;
+        return pVList;
+    }
 
     int findVertexIdByCoords(int x, int z)
     {

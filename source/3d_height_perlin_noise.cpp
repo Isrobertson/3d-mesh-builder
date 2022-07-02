@@ -14,32 +14,37 @@
 void determineVertexHeight(Vertexlist& vList)
 {
 	int id = 0;
-	double offsetUp = 0.05;
-	double offsetDown = -0.05;
-	double calibratedPoint = 0;
 	int randNum = 0;
+	int perlinArray[100] = { 0 };
 
-	for (Vertex v : vList.getVertexList())
+	std::vector<Vertex> *pVlist = vList.getVertexListByPointer();
+
+	// create a perlin noise array for terrain generation
+
+	srand(time(0));
+
+	for (int i = 0; i < 100; i++)
 	{
-		srand(time(0));
-		randNum = (rand() % 2) + 1;
-		std::cout << "\nRandom number: " << randNum;
-		if (randNum == 1)
-		{
-			v.setY(calibratedPoint + offsetUp);
-		}
-		else if (randNum == 2)
-		{
-			v.setY(calibratedPoint + offsetDown);
-		}
-
-		calibratedPoint = v.getY();
-		vList.setIndividualVertex(v, id++);
+		perlinArray[i] = (rand() % 10) + 1;
 	}
 
+	int x = 0;
+	for (Vertex v : *pVlist)
+	{
+		// generate height
+		v.setY(perlinArray[(rand() % 100) + 1]);
+	}
+
+	int i = 0;
 	// debug
 	for (Vertex v : vList.getVertexList())
 	{
 		std::cout << "\nY: " << v.getY();
+		if (i > 50)
+		{
+			break;
+		}
+		else
+			i++;
 	}
 }

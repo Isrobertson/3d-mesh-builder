@@ -9,6 +9,7 @@ Functionality needed
 		- figure out how to implement perlin noise (research)
 
 
-NOTE:
-	Upload to the refactor branch to show the difference between what I made for the deadline
-	and what I refactored to better my skill in coding
+TO DO:
+
+	- learn to pass a vertex vector back as a pointer to assign the y values.
+	- finish the perlin noise generation.

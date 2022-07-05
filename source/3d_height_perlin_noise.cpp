@@ -28,11 +28,22 @@ void determineVertexHeight(Vertexlist& vList)
 		perlinArray[i] = (rand() % 10) + 1;
 	}
 
+	/*
+		Note:
+			It does work but the terrain is way to bumpy and sharp.
+			it can be good for old retro terrain but idealy would like
+			to have much more natural terrain
+
+			To Do:
+				create an origin point that goes either up or down and has a 
+				min and max height range.
+	*/
+
 	int x = 0;
-	for (Vertex v : *pVlist)
+	for (Vertex &v : *pVlist)
 	{
 		// generate height
-		v.setY(perlinArray[(rand() % 100) + 1]);
+		v.setY(perlinArray[(rand() % 100)]);
 	}
 
 	int i = 0;
@@ -40,11 +51,5 @@ void determineVertexHeight(Vertexlist& vList)
 	for (Vertex v : vList.getVertexList())
 	{
 		std::cout << "\nY: " << v.getY();
-		if (i > 50)
-		{
-			break;
-		}
-		else
-			i++;
 	}
 }

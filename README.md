@@ -12,4 +12,4 @@
 - efficient debugging
 - multiple file compilation
 - memory management via pointers and references
-- learned better loopig methods
+- learned better looping methods

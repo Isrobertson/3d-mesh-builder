@@ -16,6 +16,8 @@ void determineVertexHeight(Vertexlist& vList)
 	int id = 0;
 	int randNum = 0;
 	int perlinArray[100] = { 0 };
+	int origin = 0;
+	bool isNegative = false, isPositive = true;
 
 	std::vector<Vertex> *pVlist = vList.getVertexListByPointer();
 
@@ -25,7 +27,7 @@ void determineVertexHeight(Vertexlist& vList)
 
 	for (int i = 0; i < 100; i++)
 	{
-		perlinArray[i] = (rand() % 10) + 1;
+		perlinArray[i] = (rand() % 5) + 1;
 	}
 
 	/*
@@ -44,12 +46,5 @@ void determineVertexHeight(Vertexlist& vList)
 	{
 		// generate height
 		v.setY(perlinArray[(rand() % 100)]);
-	}
-
-	int i = 0;
-	// debug
-	for (Vertex v : vList.getVertexList())
-	{
-		std::cout << "\nY: " << v.getY();
 	}
 }

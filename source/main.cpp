@@ -40,12 +40,12 @@ int main()
             {
                 std::cin.ignore(10000, '\n');
                 pushBackObject(objList, getNameInput());
-                std::cout << "\nEnter Dimentions between 1 x 1 or 1000 x 1000 " << std::endl;
+                std::cout << "\nEnter Dimentions between 1 x 1 or 150 x 150 " << std::endl;
 
                 std::cout << "\nEnter for Length: ";
-                length = getNumInput(1, 1000);
+                length = getNumInput(1, 150);
                 std::cout << "\nEnter for Width: ";
-                width = getNumInput(1, 1000);
+                width = getNumInput(1, 150);
                 objList[i - 1]->setVertexData(createField(length + 1, width + 1));
             }
             else
@@ -53,12 +53,12 @@ int main()
                 std::cin.ignore(10000, '\n');
                 name = "Terrain " + std::to_string(i);
                 pushBackObject(objList, name);
-                std::cout << "\nEnter Dimentions between 1 x 1 or 1000 x 1000 " << std::endl;
+                std::cout << "\nEnter Dimentions between 1 x 1 or 150 x 150 " << std::endl;
 
                 std::cout << "\nEnter for Length: ";
-                length = getNumInput(1, 1000);
+                length = getNumInput(1, 150);
                 std::cout << "\nEnter for Width: ";
-                width = getNumInput(1, 1000);
+                width = getNumInput(1, 150);
                 objList[i - 1]->setVertexData(createField(length + 1, width + 1));
             }
             std::cout << "\nObject name: " << objList[i-1]->getObjName();

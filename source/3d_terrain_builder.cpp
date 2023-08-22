@@ -2,6 +2,7 @@
 #include "header/3d_terrain_builder.h"
 #include "header/classes/3d_object.h"
 #include "header/tri_to_quad_sort.h"
+#include "header/3d_height_perlin_noise.h"
 
 void triangulateField(Vertexlist& vList, int width, int length)
 {
@@ -52,16 +53,8 @@ Vertexlist createField(int pLength, int pWidth)
         }
     }
 
-    int i = 0;
-    for(Vertex v : aList.getVertexList())
-    {
-        ++i;
-        while(i >= 5)
-        {
-            i = 0;
-            std::cout << std::endl;
-        }
-    }
+    // temporarly default for now
+    determineVertexHeight(aList);
 
     triangulateField(aList, pWidth, pLength);
 

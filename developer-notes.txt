@@ -1,13 +1,15 @@
-Main program
-	To do:
+Refactoring notes:
 
-		1. finish polymorphism
-		2. make an output function to properly--
-		   format and output to the .obj file
-		3. make user I/O for program usability
+	1. Finish the perlin noise generation function
+	2. (OPTIONAL) touch up on the project to make it more efficient
 
-Terrain builder
+Functionality needed
 
-	to do:
-		1. finish triangulate function
-		2. set up quad grouping (for better organization of format)
+	1. finish the terrain perlin noise function--
+		- figure out how to implement perlin noise (research)
+
+
+TO DO:
+
+	- learn to pass a vertex vector back as a pointer to assign the y values.
+	- finish the perlin noise generation.

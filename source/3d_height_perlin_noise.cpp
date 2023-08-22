@@ -14,32 +14,37 @@
 void determineVertexHeight(Vertexlist& vList)
 {
 	int id = 0;
-	double offsetUp = 0.05;
-	double offsetDown = -0.05;
-	double calibratedPoint = 0;
 	int randNum = 0;
+	int perlinArray[100] = { 0 };
+	int origin = 0;
+	bool isNegative = false, isPositive = true;
 
-	for (Vertex v : vList.getVertexList())
+	std::vector<Vertex> *pVlist = vList.getVertexListByPointer();
+
+	// create a perlin noise array for terrain generation
+
+	srand(time(0));
+
+	for (int i = 0; i < 100; i++)
 	{
-		srand(time(0));
-		randNum = (rand() % 2) + 1;
-		std::cout << "\nRandom number: " << randNum;
-		if (randNum == 1)
-		{
-			v.setY(calibratedPoint + offsetUp);
-		}
-		else if (randNum == 2)
-		{
-			v.setY(calibratedPoint + offsetDown);
-		}
-
-		calibratedPoint = v.getY();
-		vList.setIndividualVertex(v, id++);
+		perlinArray[i] = (rand() % 5) + 1;
 	}
 
-	// debug
-	for (Vertex v : vList.getVertexList())
+	/*
+		Note:
+			It does work but the terrain is way to bumpy and sharp.
+			it can be good for old retro terrain but idealy would like
+			to have much more natural terrain
+
+			To Do:
+				create an origin point that goes either up or down and has a 
+				min and max height range.
+	*/
+
+	int x = 0;
+	for (Vertex &v : *pVlist)
 	{
-		std::cout << "\nY: " << v.getY();
+		// generate height
+		v.setY(perlinArray[(rand() % 100)]);
 	}
 }

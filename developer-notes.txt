@@ -1,15 +1,4 @@
-Refactoring notes:
+To Do:
 
-	1. Finish the perlin noise generation function
-	2. (OPTIONAL) touch up on the project to make it more efficient
-
-Functionality needed
-
-	1. finish the terrain perlin noise function--
-		- figure out how to implement perlin noise (research)
-
-
-TO DO:
-
-	- learn to pass a vertex vector back as a pointer to assign the y values.
-	- finish the perlin noise generation.
+	- output doesnt work if there is no output file
+	- clean up code to be more readable and manageable
